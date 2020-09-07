@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #define MAX 10
 
+int affichage(int *, char *);
 int main()
 {
     int saisi[MAX];
@@ -17,7 +18,7 @@ int main()
 
     for (i = 0; i < MAX; i++)
     {
-        printf("val : ");
+        printf("valeur : ");
         scanf("%d", saisi + i);
     }
     //tri des nombres en fonction de le parité
@@ -35,20 +36,20 @@ int main()
         }
     }
     //affichage des nombres pair
-    printf("\n1) ");
-    i = 0;
-    while (*(pair + i) != '\0')
-    {
-        printf(" %d ", *(pair + i));
-        i++;
-    }
+    affichage(pair, "\n valeurs paires :");
     //affichage des nombres pair
-    printf("\n2) ");
+    affichage(impair, "\n valeurs impaires :");
+    return 0;
+}
+
+int affichage(int *tab, char *message)
+{
+    int i = 0;
+    printf(message);
     i = 0;
-    while (*(impair + i) != '\0')
+    while (*(tab + i) != '\0')
     {
-        printf(" %d ", *(impair + i));
+        printf(" %d ", *(tab + i));
         i++;
     }
-    return 0;
 }
