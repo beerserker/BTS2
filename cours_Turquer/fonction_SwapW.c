@@ -3,6 +3,10 @@
 
 unsigned short Swapw(unsigned short);
 unsigned short Swapw1(unsigned short);
+
+
+
+
 int main()
 {
     unsigned short mot;
@@ -41,3 +45,7 @@ unsigned short Swapw1(unsigned short mot)
     mot = mot + octet2;
     return mot;
 }
+
+
+
+
