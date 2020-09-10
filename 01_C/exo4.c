@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#define null'\0'
+
 #define space ' '
 int word(char, int, char[], int);
 int main()
@@ -22,7 +22,7 @@ int main()
     while ((i < 100) && (*(string + i) != '\0'))
     {
         NbOfWord = word(space, NbOfWord, string, i);
-        NbOfWord = word(null, NbOfWord, string, i);
+        NbOfWord = word('\0', NbOfWord, string, i);
         i++;
     }
     printf("le nombre de mots est : %d", NbOfWord);
