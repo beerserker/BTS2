@@ -19,7 +19,7 @@ int main()
         printf("fin de saisi ?\n1:OUI\n2:NON\n");
         fflush(stdin);
         scanf("%d", &stop);
-
+  
         i++;
     } while (stop != 1);
 
