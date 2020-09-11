@@ -17,7 +17,7 @@ int main()
         printf("saisir un entier :");
         scanf("%d", (p + i));
         printf("fin de saisi ?\n1:OUI\n2:NON\n");
-        fflush(stdin);
+        
         scanf("%d", &stop);
 
         i++;
@@ -29,4 +29,8 @@ int main()
     {
         printf("%d", *(p + i));
     }
+    i=(sizeof(int))*stop;
+    printf("\nla taille memoire aloue : %d",i);
+    free(p);
 }
+    
