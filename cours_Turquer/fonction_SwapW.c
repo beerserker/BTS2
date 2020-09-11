@@ -3,9 +3,11 @@
 
 unsigned short Swapw(unsigned short);
 unsigned short Swapw1(unsigned short);
-
-
-
+unsigned short Swapw2(unsigned short);
+union Mot {
+    unsigned short smot;
+    unsigned char tab[2];
+};
 
 int main()
 {
@@ -15,6 +17,8 @@ int main()
     mot = Swapw(mot);
     printf("\nle mot est %04x apres le changement", mot);
     mot = Swapw1(mot);
+    printf("\nle mot est %04x apres le changement", mot);
+    mot = Swapw2(mot);
     printf("\nle mot est %04x apres le changement", mot);
     return 0;
 }
@@ -46,6 +50,14 @@ unsigned short Swapw1(unsigned short mot)
     return mot;
 }
 
+unsigned short Swapw2(unsigned short mot)
+{
+    union Mot tmp = {mot};
+    char temp;
+    temp = tmp.tab[0];
+    tmp.tab[0] = tmp.tab[1];
+    tmp.tab[1] = temp;
 
-
-
+    mot = tmp.smot;
+    return mot;
+}
