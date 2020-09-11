@@ -57,7 +57,7 @@ Nombre d'étages : 5
 
 Le nombre d'étages est donné par l'utilisateur.
 
-## Exercie #5
+## Exercice #5
 
 Afficher les tables de multiplications de 1 à 10 sous la forme suivante :
 
@@ -76,6 +76,46 @@ Afficher les tables de multiplications de 1 à 10 sous la forme suivante :
  10  |  10  20  30  40  50  60  70  80  90 100
  ```
 
- ## Exercice #5
+## Exercice #6
 
- ...
+On désire écrire une fonction qui permette de faire la saisie d’un tableau qui lui est passé en argument.
+
+Surdéfinissez cette fonction pour qu’elle puisse effectuer la saisie :
++ d’entiers.
++ de caractères.
+
+## Exercice #7
+
+```cpp
+void fct (int);         // fonction A 
+void fct (float); 		// fonction B
+void fct (int,float); 	// fonction C
+void fct (float,int); 	// fonction D
+
+int main () {
+    
+    int n,p;
+    float x,y;
+    char c;
+    double z;
+
+    /*
+    Les appels suivants des fonctions sont ils corrects ? 
+    Si oui, quels sont les fonctions appelées et quelles sont éventuellement les conversions mises en place ?
+    */
+
+    fct (n);
+    fct (x);
+    fct (n,x);
+    fct (x,n);
+    fct (c);
+    fct (n,p);
+    fct (n,c);
+    fct (n,z);
+}
+```
+
+## Exercice #8
+
+On désire écrire une fonction qui permet de retourner le nombre de secondes en additionnant les heures, minutes et secondes qu'on lui passe en paramètres. 
+Seul le paramètre des heure est obligatoire.
