@@ -21,6 +21,6 @@ int main () {
     fct (x,n);//correct fonction D
     fct (c);//incorect 
     fct (n,p);//incorrect --le P sera convertis en float--
-    fct (n,c);//incorrect 
-    fct (n,z);//incorect
+    fct (n,c);//incorrect fonction D
+    fct (n,z);//incorect fonction C
 }
