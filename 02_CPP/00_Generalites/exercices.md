@@ -94,8 +94,8 @@ void fct (float,int); 	// fonction D
 
 int main () {
     
-    int n,p;
-    float x,y;
+    int n, p;
+    float x, y;
     char c;
     double z;
 
@@ -118,4 +118,4 @@ int main () {
 ## Exercice #8
 
 On désire écrire une fonction qui permet de retourner le nombre de secondes en additionnant les heures, minutes et secondes qu'on lui passe en paramètres. 
-Seul le paramètre des heure est obligatoire.
+Seul le paramètre des heures est obligatoire.
