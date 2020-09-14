@@ -6,7 +6,7 @@ int main()
 {
     int number;
     int i;
-    cout << "    |"; 
+    cout << "    |";
     for (i = 1; i <= max; i++)
     {
         cout << setfill(' ') << setw(4) << right << i;
