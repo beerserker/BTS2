@@ -6,8 +6,8 @@ void tab(char *);
 
 int main()
 {
-    int entier[5];
-    char carak[5];
+    int entier[6];
+    char carak[6];
     int i;
     for (i = 0; i < 6; i++)
     {
@@ -15,11 +15,14 @@ int main()
     }
 
     tab(entier);
+    
     tab(carak);
+    cout<<"\nentier :";
     for (i = 0; i < 6; i++)
     {
         cout << " " << entier[i];
     }
+    cout<<"\ncaractere :";
     for (i = 0; i < 6; i++)
     {
         cout << " " << carak[i];
@@ -29,7 +32,7 @@ int main()
 void tab(int *ptr)
 {
     int i;
-
+cout<<"saisir X entiers:"<<endl;
     for (i = 0; i < 6; i++)
     {
         cin >> *(ptr + i);

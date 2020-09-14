@@ -34,17 +34,24 @@ void affichage(int etage, int max, int color) //affichage des differentes lignes
     }
     for (i = 0; i < etoile; i++) //affichage des etoiles
     {
-        if (color != 2)
+      
+        if(color==3)
+        {
+             k = 6;
+            SetConsoleTextAttribute(hConsole, k);
+            color++;
+        }
+         if (color == 4)
+        {
+            k = 4;
+            SetConsoleTextAttribute(hConsole, k);
+            color=0;
+        }
+        else
         {
             k = 2;
             SetConsoleTextAttribute(hConsole, k);
             color++;
-        }
-        else
-        {
-            k = 4;
-            SetConsoleTextAttribute(hConsole, k);
-            color = 0;
         }
        
         cout << "*";
