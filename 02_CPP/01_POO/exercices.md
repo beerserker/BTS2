@@ -32,7 +32,7 @@ int main (void)
     // AFFICHAGE
     printf("Désignation : %s \n",art.designation);
     printf("Référence : %s \n",art.reference);
-    printf("Prix unitaire : %f \n",art.px_unitaire);
+    printf("Prix unitaire : %.2f \n",art.px_unitaire);
 
     return 0;
 }
@@ -76,3 +76,75 @@ Ecrire une classe Fraction.
 
 1) Représenter la classe en UML.
 2) Ecrire le code de la classe dans des fichiers séparés et un programme de démonstration.
+
+## Exercice 5
+
+Modifier le programme suivant pour qu'il affiche  :
+```
+nom : noname
+nom : paul
+nom : eric
+nom : fred
+nom : xavier
+nombre de Sailors : 5
+```
+
+```cpp
+#include <iostream>
+#include <string.h>
+
+using namespace std;
+
+class Sailor {
+    private :
+        char *name;
+        static int sailorsCount;
+    public :
+        Sailor(char *);
+        Sailor();
+        ~Sailor();
+        int getSailorsCount();
+        void setName(char *);
+        void display();
+};
+
+Sailor::Sailor(char* argName) {
+}
+
+Sailor::Sailor() {
+}
+
+Sailor::~Sailor() {
+}
+
+void Sailor::display() {
+}
+
+void Sailor::setName(char * argName) {
+}
+
+int Sailor::getSailorsCount() {
+}
+
+int main() {
+    Sailor sailor1;
+    Sailor sailor2("paul");
+    Sailor bateau1[3];
+
+    sailor1.display();
+    sailor2.display();
+
+    bateau1[0].setNom("eric");
+    bateau1[1].setNom("fred");
+    bateau1[2].setNom("xavier");
+
+    for (int i = 0; i < 3; i++) {
+        bateau1[i].display();
+    }
+
+    cout<< "nombre de sailors :" << sailor1.getSailorsCount();
+    
+    return 0;
+}
+```
+
