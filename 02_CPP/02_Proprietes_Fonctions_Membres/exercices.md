@@ -51,3 +51,22 @@ class Car {
 ### Partie 2
 
 Adapter la classe Car pour qu'elle dispose d'une fonction membre fournissant le nombre de Car créées à un instant donné.
+
+## Exercice 3
+
+Soit le programme suivant :
+
+```cpp
+int main() {
+    Truc x;
+    cout << "Bonjour !" << endl;
+}
+```
+
+Créer la classe ```Truc``` de manière à ce que le progamme ci-dessus fournisse le résultat suivant :
+
+```
+Création d'un truc
+Bonjour !
+Destruction d'un truc
+```
