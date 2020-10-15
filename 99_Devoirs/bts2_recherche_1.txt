@@ -1,0 +1,23 @@
+Sujets recherche
+1h de recherche/lecture/préparation - 5 min de présentation
+
+Scrum/Agile
+	https://blog.trello.com/fr/methode-agile-scrum-gestion-projet
+Agile manifest
+	https://fr.wikipedia.org/wiki/Manifeste_agile
+ERP
+	https://www.sylob.com/presentation-logiciel-erp
+CRM
+	https://www.salesforce.com/fr/learning-centre/crm/what-is-crm/
+BI
+	https://www.lebigdata.fr/business-intelligence-definition
+MOA/MOE
+	https://blog.lesjeudis.com/moa-moe-quelles-sont-les-differences
+OpenData
+	https://www.lebigdata.fr/open-data-definition
+node.js
+	https://practicalprogramming.fr/nodejs/	
+Tests unitaires
+	https://fr.yeeply.com/blog/test-unitaire-comment-sy-prendre/
+Cobol
+	https://www.numerama.com/tech/618709-au-coeur-de-toutes-les-banques-le-langage-cobol-va-t-il-manquer-de-developpeurs.html
