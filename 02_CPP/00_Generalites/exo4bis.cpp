@@ -41,15 +41,23 @@ void affichage(int etage, int max, int color) //affichage des differentes lignes
             SetConsoleTextAttribute(hConsole, k);
             color++;
         }
-         if (color == 4)
+         else if (color == 5)
         {
             k = 4;
             SetConsoleTextAttribute(hConsole, k);
             color=0;
         }
+        else if (color == -1)
+        {
+         k = 5;
+            SetConsoleTextAttribute(hConsole, k);
+            color=0;
+        }
+        
+        
         else
         {
-            k = 2;
+            k = 1;
             SetConsoleTextAttribute(hConsole, k);
             color++;
         }

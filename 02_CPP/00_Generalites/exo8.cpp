@@ -1,7 +1,7 @@
 #include <iostream>
 
 using namespace std;
-int convertS(int , int = 0, int = 0);
+int convertS(int heure, int min= 0, int sec= 0);
 
 int main()
 {
