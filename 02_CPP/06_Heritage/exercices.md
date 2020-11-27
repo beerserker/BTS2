@@ -157,3 +157,123 @@ constructeur B1 avec x = 4
 destructeur B1
 destructeur A1
 ```
+
+## Exercice 4
+
+Soit une classe qui représente un point dans un plan.
+
+```cpp
+class Point2d {
+    int x,y;
+    public:
+        Point2d(int px,int py) {
+            x = px, y = py;
+        }
+        Point2d(Point2d & p) {
+            x = p.x, y = p.y;
+        }
+        void affiche() {
+            cout << " x = " << x << " y = " << y;
+        }
+};
+```
+
+1. Ecrire une classe ```Point3d``` dérivée de la classe qui rajoute une cordonnée ```z``` au point. Cette classe possède une fonction membre ```affiche()``` qui affiche :
+```
+z = (valeur de z)
+```
+2. Ecrire un programme qui crée un objet avec les coordonnées ```x = 1, y = 2, z = 3```. Le programme affiche :
+```
+x = 1 y = 2 z = 3
+```
+3. Modifier la méthode ```affiche()``` de la classe ```Point3d``` pour qu'elle affiche en appelant la méthode affiche de la classe Point2d
+```
+x = 1 y = 2 z = 3
+```
+4. Supprimer la méthode affiche() de Point2d et faire le nécessaire pour utiliser une seule méthode affiche() dans Point3d pour afficher :
+```
+x = 1 y = 2 z = 3
+```
+
+## Exercice 5
+
+```cpp
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+struct Chambre {
+    float surface;
+    int fenetres;
+    public :
+        Chambre(float cSurface = 9.0, int cFenetres = 0) {
+            surface = cSurface, fenetres = cFenetres;
+        };
+        string toString() {
+            char sSurface[5];
+            sprintf(sSurface, "%.1f", surface);
+            return "[" + (string)sSurface + " m2, " + to_string(fenetres) + (fenetres > 1 ? " fenetres" : " fenetre") + "]";
+        };
+};
+
+class Batiment {
+    protected:
+        string adresse;
+    public:
+        Batiment( string adr) : adresse(adr) {};
+        string getAdr() {
+            return adresse;
+        };
+};
+
+class Maison : public Batiment
+{
+    Chambre * chambres;
+    int nbChambres;
+    public:
+        Maison(int nCh, string adr, Chambre * mChambres) : Batiment(adr) {
+            chambres = new Chambre[nbChambres = nCh];
+            for(int i = 0; i < nbChambres; i++) {
+                chambres[i] = mChambres[i];
+            }
+        }
+        ~Maison() {
+            delete [] chambres;
+        }
+        int getNbChambres() {
+            return nbChambres;
+        }
+        string afficheChambres() {
+            string result = "";
+            for(int i = 0; i < nbChambres; i++) {
+                if (i != 0) {
+                    result += ", ";
+                }
+                result += chambres[i].toString();
+            }
+            return result;
+        }
+};
+
+int main()
+{
+    Chambre chambres[] = {Chambre(12.5, 1), Chambre(14, 2), Chambre(9, 1)};
+    Maison *m1 = new Maison(3, "LAVAL", chambres);
+    cout << "Maison 1 a " << m1->getAdr() << ", chambres " <<  m1->getNbChambres() << " : " << m1->afficheChambres() << endl;
+    Maison m2 = *m1;
+    delete m1;
+    cout << "Maison 2 a " << m2.getAdr() << ", chambres " <<  m2.getNbChambres() << " : "   << m2.afficheChambres() << endl;
+}
+```
+
+1. Le programme doit afficher :
+```
+Maison 1 a LAVAL, chambres 3 : [12.5 m2, 1 fenetre], [14.0 m2, 2 fenetres], [9.0 m2, 1 fenetre]
+Maison 2 a LAVAL, chambres 3 : [12.5 m2, 1 fenetre], [14.0 m2, 2 fenetres], [9.0 m2, 1 fenetre]
+```
+Compléter le programme, proposer deux solutions
+2) Modifier le programme dans le cas d'un héritage protected :
+```cpp
+class Maison : protected Batiment
+```
