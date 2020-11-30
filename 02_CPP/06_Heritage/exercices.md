@@ -164,16 +164,16 @@ Soit une classe qui représente un point dans un plan.
 
 ```cpp
 class Point2d {
-    int x,y;
+    int x, y;
     public:
-        Point2d(int px,int py) {
+        Point2d(int px, int py) {
             x = px, y = py;
         }
         Point2d(Point2d & p) {
             x = p.x, y = p.y;
         }
         void affiche() {
-            cout << " x = " << x << " y = " << y;
+            cout << "x = " << x << " y = " << y;
         }
 };
 ```
@@ -182,7 +182,7 @@ class Point2d {
 ```
 z = (valeur de z)
 ```
-2. Ecrire un programme qui crée un objet avec les coordonnées ```x = 1, y = 2, z = 3```. Le programme affiche :
+2. Ecrire un programme (main) qui crée un objet avec les coordonnées ```x = 1, y = 2, z = 3```. Le programme affiche :
 ```
 x = 1 y = 2 z = 3
 ```
@@ -190,7 +190,7 @@ x = 1 y = 2 z = 3
 ```
 x = 1 y = 2 z = 3
 ```
-4. Supprimer la méthode affiche() de Point2d et faire le nécessaire pour utiliser une seule méthode affiche() dans Point3d pour afficher :
+4. Supprimer/commenter la méthode affiche() de Point2d et faire le nécessaire pour utiliser une seule méthode affiche() dans Point3d pour afficher :
 ```
 x = 1 y = 2 z = 3
 ```
@@ -267,13 +267,14 @@ int main()
 }
 ```
 
-1. Le programme doit afficher :
+1. Le programme devrait afficher, mais bugue...
 ```
 Maison 1 a LAVAL, chambres 3 : [12.5 m2, 1 fenetre], [14.0 m2, 2 fenetres], [9.0 m2, 1 fenetre]
 Maison 2 a LAVAL, chambres 3 : [12.5 m2, 1 fenetre], [14.0 m2, 2 fenetres], [9.0 m2, 1 fenetre]
 ```
-Compléter le programme, proposer deux solutions
-2) Modifier le programme dans le cas d'un héritage protected :
+Identifier l'anomalie, puis compléter le programme sans modifier le ```main()``` pour corriger l'anomalie, proposer deux solutions.
+
+2. Modifier le programme dans le cas d'un héritage protected :
 ```cpp
 class Maison : protected Batiment
 ```
