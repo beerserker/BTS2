@@ -6,6 +6,59 @@
 
 Git est un logiciel de gestion de versions décentralisé. C’est un logiciel libre créé par Linus Torvalds, auteur du noyau Linux, et distribué selon les termes de la licence publique générale GNU version 2 (Wikipedia).
 
+## Installation (Windows)
+
+1) Se rendre sur le site https://git-scm.com/
+2) Cliquer sur "Download X.XX.X for Windows"
+![Site VSCode](img/git-01.png)
+3) Enregistrer l'installeur sur votre pc
+4) Double-cliquer sur l'installeur (L'utilisateur doit posséder les droits d'admnistration du pc)
+5) Cliquer sur "Next >"
+![Etape 1](img/git-02.png)
+6) Sélectionner les options ci-dessous et cliquer sur "Next >"
+![Etape 2](img/git-03.png)
+7) Choisir "Use the Nano editor by default" et cliquer sur "Next >"
+![Etape 3](img/git-04.png)
+8) Choisir "Let Git decide" et cliquer sur "Next >"
+![Etape 4](img/git-05.png)
+9) Choisir "Git from the commande line and also form 3rd-party software" et cliquer sur "Next >"
+![Etape 5](img/git-06.png)
+10) Choisir "Use the OpenSSL library" et cliquer sur "Next >"
+![Etape 6](img/git-07.png)
+11) Choisir "Checkout Windows-style, commit Unix-style line endings" et cliquer sur "Next >"
+![Etape 7](img/git-08.png)
+12) Choisir "Use MinTTY (the default terminal of MSYS2) et cliquer sur "Next >"
+![Etape 8](img/git-09.png)
+13) Choisir "Git Credential Manager Core" et cliquer sur "Next >"
+![Etape 9](img/git-10.png)
+14) Choisir l'option "Enable file system caching" et cliquer sur "Next >"
+![Etape 10](img/git-11.png)
+15) Ne rien sélectionner et cliquer sur "Install"
+![Etape 11](img/git-12.png)
+16) Cliquer sur "Finish"
+17) Ouvrir une Invite de commande (DOS) et lancer les deux commandes suivantes (en remplaçant les données entre "" par vos informations) pour initialiser correctement votre Git :
+```bash
+git config --global user.name "Prénom NOM"
+git config --global user.email "email@email.email"
+```
+
+## Récupérer son cours
+
+1) Ouvrir sa page Github dans un navigateur, cliquer sur "Code" puis copier l'adresse du repository distant
+![Github](img/git-13.png)
+2) Créer un dossier "projects/bts1" à la racine du disque C:
+3) Dans le dossier "bts1", cliquer-droit et cliquer sur "Git Bash Here" ou ouvrir une Invite de commande (DOS) et se rendre dans le sossier "bts1"
+4) Dans la console qui s'ouvre, lancer la commande suivante en remplaçant [url du repo] par l'url copiée à l'étape 1
+```
+git clone [url du repo]
+```
+![git clone](img/git-14.png)
+
+5) Se connecter en utilisant ses identifiants Github quand Git les demande.
+6) Le dossier créé dans bts1 devient le repository local, travailler dans ce dossier.
+![git open with code](img/git-15.png)
+
+
 ## Fonctionnement de base
 
 ![Fonctionnement de Git](img/git-operations.png "Fonctionnement de Git")
