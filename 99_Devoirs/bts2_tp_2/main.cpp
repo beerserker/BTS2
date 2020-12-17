@@ -9,12 +9,32 @@
 
 void displayGraph();
 
-int main()
-{
-    system("chcp 65001");
-    system("cls");
+int main() {
 
-    //displayGraph();
+    /*
+    Le graphique utilisé dans ce TP est le suivant :
+     ·    ·    ·    ·    ·   5┬    ·    ·    ·    ·    ·
+                              │                         
+     ·    ·    ·    ·    ·   4┼    ·    ·    ·    ·    ·
+                              │                         
+     ·    ·    ·    ·    ·   3┼    ·    ·    ·    ·    ·
+                              │                         
+     ·    ·    ·    ·    ·   2┼    ·  B ■    ·    ·    ·
+                              │                         
+     ·    ·    ·    ·    ·   1┼  A ■    ·  E ■    ·    ·
+                              │                         
+     ├────┼────┼────┼────┼────┼────┼──C ■────┼────┼────┤
+    -5   -4   -3   -2   -1   0│    1    2    3    4    5
+     ·    ·    ·    ·    ·  -1┼    ·    ·  D ■    ·    ·
+                              │                         
+     ·    ·    ·    ·    ·  -2┼    ·    ·    ·    ·    ·
+                              │                         
+     ·    ·    ·    ·    ·  -3┼    ·    ·    ·    ·    ·
+                              │                         
+     ·    ·    ·    ·    ·  -4┼    ·    ·    ·    ·    ·
+                              │                         
+     ·    ·    ·    ·    ·  -5┴    ·    ·    ·    ·    ·
+    */
 
     // Création des points
     vector<Point> vec;
@@ -74,12 +94,12 @@ int main()
     cout << endl;
 
     // Opérateurs de segment
-    cout << ab.getName() << " et " << ab2.getName() << (ab != ab2 ? " sont différents !" : " sont identiques !") << endl;
+    cout << ab.getName() << " et " << ab2.getName() << (ab != ab2 ? " sont differents !" : " sont identiques !") << endl;
     cout << endl;
 
     // Exercice 6 - Héritage
     Triangle abc(a, b, c);
-    cout << "Périmètre de " << abc.getName() << " : " << abc.getPerimeter() << endl;
+    cout << "Perimetre de " << abc.getName() << " : " << abc.getPerimeter() << endl;
     cout << abc.getName() << (abc.isRight() ? " est un triangle rectangle" : " n'est pas un triangle rectangle") << endl;
 
     Triangle bcd(b, c, d);
@@ -87,8 +107,8 @@ int main()
     cout << bcd.getName() << (bcd.isRight() ? " est un triangle rectangle" : " n'est pas un triangle rectangle") << endl;
     
     Quadrilateral abec(a, b, e, c);
-    cout <<  abec.getName() << (abec.isRegular() && abec.hasARightAngle() ? " est un carré" : " n'est pas un carré") << endl;
-    
+    cout <<  abec.getName() << (abec.isRegular() && abec.hasARightAngle() ? " est un carre" : " n'est pas un carre") << endl;
+    */
 
     //  Exercice 6.6
 
