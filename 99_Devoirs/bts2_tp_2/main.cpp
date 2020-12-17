@@ -6,10 +6,31 @@
 void displayGraph();
 
 int main() {
-    system("chcp 65001");
-    system("cls");
 
-    displayGraph();
+    /*
+    Le graphique utilisé dans ce TP est le suivant :
+     ·    ·    ·    ·    ·   5┬    ·    ·    ·    ·    ·
+                              │                         
+     ·    ·    ·    ·    ·   4┼    ·    ·    ·    ·    ·
+                              │                         
+     ·    ·    ·    ·    ·   3┼    ·    ·    ·    ·    ·
+                              │                         
+     ·    ·    ·    ·    ·   2┼    ·  B ■    ·    ·    ·
+                              │                         
+     ·    ·    ·    ·    ·   1┼  A ■    ·  E ■    ·    ·
+                              │                         
+     ├────┼────┼────┼────┼────┼────┼──C ■────┼────┼────┤
+    -5   -4   -3   -2   -1   0│    1    2    3    4    5
+     ·    ·    ·    ·    ·  -1┼    ·    ·  D ■    ·    ·
+                              │                         
+     ·    ·    ·    ·    ·  -2┼    ·    ·    ·    ·    ·
+                              │                         
+     ·    ·    ·    ·    ·  -3┼    ·    ·    ·    ·    ·
+                              │                         
+     ·    ·    ·    ·    ·  -4┼    ·    ·    ·    ·    ·
+                              │                         
+     ·    ·    ·    ·    ·  -5┴    ·    ·    ·    ·    ·
+    */
 
     // Création des points
     Point a ("A", 1, 1);
@@ -40,18 +61,18 @@ int main() {
     cout << endl;
 
     // Perpendiculaires
-    cout << ab.getName() << (ab.isPerpendicularTo(ac) ? " est perpendiculaire à " : " n'est pas perpendiculaire à ") << ac.getName() << endl;
-    cout << ab.getName() << (ab.isPerpendicularTo(bc) ? " est perpendiculaire à " : " n'est pas perpendiculaire à ") << bc.getName() << endl;
-    cout << ae.getName() << (ae.isPerpendicularTo(bc) ? " est perpendiculaire à " : " n'est pas perpendiculaire à ") << bc.getName() << endl;
+    cout << ab.getName() << (ab.isPerpendicularTo(ac) ? " est perpendiculaire a " : " n'est pas perpendiculaire a ") << ac.getName() << endl;
+    cout << ab.getName() << (ab.isPerpendicularTo(bc) ? " est perpendiculaire a " : " n'est pas perpendiculaire a ") << bc.getName() << endl;
+    cout << ae.getName() << (ae.isPerpendicularTo(bc) ? " est perpendiculaire a " : " n'est pas perpendiculaire a ") << bc.getName() << endl;
     cout << endl;
 
     // Opérateurs de segment
-    cout << ab.getName() << " et " << ab2.getName() << (ab != ab2 ? " sont différents !" : " sont identiques !") << endl;
+    cout << ab.getName() << " et " << ab2.getName() << (ab != ab2 ? " sont differents !" : " sont identiques !") << endl;
     cout << endl;
 
     /*  Exercice 6 - Héritage
     Triangle abc(a, b, c);
-    cout << "Périmètre de " << abc.getName() << " : " << abc.getPerimeter() << endl;
+    cout << "Perimetre de " << abc.getName() << " : " << abc.getPerimeter() << endl;
     cout << abc.getName() << (abc.isRight() ? " est un triangle rectangle" : " n'est pas un triangle rectangle") << endl;
 
     Triangle bcd(b, c, d);
@@ -59,36 +80,10 @@ int main() {
     cout << bcd.getName() << (bcd.isRight() ? " est un triangle rectangle" : " n'est pas un triangle rectangle") << endl;
     
     Quadrilateral abec(a, b, e, c);
-    cout <<  abec.getName() << (abec.isRegular() && abec.hasARightAngle() ? " est un carré" : " n'est pas un carré") << endl;
+    cout <<  abec.getName() << (abec.isRegular() && abec.hasARightAngle() ? " est un carre" : " n'est pas un carre") << endl;
     */
 
     //  Exercice 6.6
 
     return 0;
-}
-
-
-void displayGraph() {
-    cout << " ·    ·    ·    ·    ·   5┬    ·    ·    ·    ·    ·" << endl;
-    cout << "                          │                         " << endl;
-    cout << " ·    ·    ·    ·    ·   4┼    ·    ·    ·    ·    ·" << endl;
-    cout << "                          │                         " << endl;
-    cout << " ·    ·    ·    ·    ·   3┼    ·    ·    ·    ·    ·" << endl;
-    cout << "                          │                         " << endl;
-    cout << " ·    ·    ·    ·    ·   2┼    ·  B ■    ·    ·    ·" << endl;
-    cout << "                          │                         " << endl;
-    cout << " ·    ·    ·    ·    ·   1┼  A ■    ·  E ■    ·    ·" << endl;
-    cout << "                          │                         " << endl;
-    cout << " ├────┼────┼────┼────┼────┼────┼──C ■────┼────┼────┤" << endl;
-    cout << "-5   -4   -3   -2   -1   0│    1    2    3    4    5" << endl;
-    cout << " ·    ·    ·    ·    ·  -1┼    ·    ·  D ■    ·    ·" << endl;
-    cout << "                          │                         " << endl;
-    cout << " ·    ·    ·    ·    ·  -2┼    ·    ·    ·    ·    ·" << endl;
-    cout << "                          │                         " << endl;
-    cout << " ·    ·    ·    ·    ·  -3┼    ·    ·    ·    ·    ·" << endl;
-    cout << "                          │                         " << endl;
-    cout << " ·    ·    ·    ·    ·  -4┼    ·    ·    ·    ·    ·" << endl;
-    cout << "                          │                         " << endl;
-    cout << " ·    ·    ·    ·    ·  -5┴    ·    ·    ·    ·    ·" << endl;
-    cout << endl;
 }
