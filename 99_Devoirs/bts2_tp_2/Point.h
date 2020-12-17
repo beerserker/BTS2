@@ -11,6 +11,7 @@ class Point {
         static int count;
     public :
         Point(string = "x", int = 0, int = 0);
+        
         ~Point();
         string getName();
         int getX();
